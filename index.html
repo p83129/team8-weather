@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>雨量觀測</title>
+	<!-- 建立整體樣式指導：基礎字型、字體、基底色、標題、段落樣式等等 -->
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<!-- 建立雨量觀測部份的樣式 -->
+	<link rel="stylesheet" type="text/css" href="css/raining.css" />
+	<!-- 大家各自的Css的樣式 -->
+	<link rel="stylesheet" type="text/css" href="css/style-A.css" />
+	<link rel="stylesheet" type="text/css" href="css/style-B.css" />
+	<link rel="stylesheet" type="text/css" href="css/style-C.css" />
+</head>
+<body background="image\body.png"><!-- background="image\body.png" -->
+	<div class="title-A">
+		<div class="logo-divA">
+			<img src="image\Logo.png" class="logo-imgA"> 
+		</div>
+		<div style="line-height: 0px; color: #FFFFFF;position: relative;top: 20px;">
+			<h3>氣象觀測站</h3>
+			<p>Meteorological Observatory</p>
+		</div>
+	</div>
+	<div class="marquee-divA">	
+		<div class="bg-grayA"></div>	
+		<font size=4 color="#FFFFFF" style="position: relative; bottom: 25px;"><marquee direction="right" height="25">提醒您防疫期間外出時務必配戴好口罩，氣象觀測站關心您！</marquee></font>
+	</div>
+	<div class="div-A">
+		<img src="image\body2.png" class="background-imgA">
+		
+		<!-- B部分 -->
+		<div style="border: #FFFFFF; border-style: solid; width: 20%; margin: 60px 30px 30px 0px;
+		height: 500px; position: relative; float: left;"></div>
+
+		<!-- A部分 -->
+		<div class="context-A"></div>
+
+		<!-- C部分 -->
+		<div style="border: #FFFFFF; border-style: solid; width: 30%; margin: 60px 0px 30px 30px;
+		height: 500px; position: relative; float: left;"></div>
+	</div>
+	
+	<script>
+		// 以下是我申請的 KEY 請使用無所謂，你也可以自己去中央氣象局網站申請一個
+		// https://opendata.cwb.gov.tw/index
+		const CWB_API_KEY="CWB-2EF6C203-2256-404D-AD80-5E9DE0982C6A";
+	</script>
+	<script src="js/raining.js"></script>
+</body>
+</html>
