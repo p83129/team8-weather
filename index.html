@@ -32,8 +32,29 @@
 		<img src="image\body2.png" class="background-imgA">
 		
 		<!-- B部分 -->
-		<div style="border: #FFFFFF; border-style: solid; width: 20%; margin: 60px 30px 30px 0px;
-		height: 500px; position: relative; float: left;"></div>
+		<div class="context-B">
+			<div class="location">
+				<div class="locationName">區域</div>
+				<div class="locations"></div>
+			</div>
+			<div class="time">
+				<div class="time_title">時段</div>
+				<div class="time_bar">
+					<div class="time_select" id="time0">
+						<div class="start0"></div>
+						<div class="end" id="end0"></div>
+					</div>
+					<div class="time_select" id="time1">
+						<div class="start1"></div>
+						<div class="end" id="end1"></div>
+					</div>
+					<div class="time_select" id="time2">
+						<div class="start2"></div>
+						<div class="end" id="end2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- A部分 -->
 		<div class="context-A"></div>
@@ -49,5 +70,6 @@
 		const CWB_API_KEY="CWB-2EF6C203-2256-404D-AD80-5E9DE0982C6A";
 	</script>
 	<script src="js/raining.js"></script>
+	<script src="js/partB.js"></script>
 </body>
 </html>
