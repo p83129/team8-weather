@@ -4,6 +4,7 @@
 	height: 505px; 
     position: relative; 
     float: left;
+
     margin-left: 50px;
     background-color: rgb(255, 255, 255);
     border-top-left-radius: 2.5em;
@@ -67,11 +68,11 @@
     width:auto;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: -5px;
+    margin-top: 20px;
     color: white;
     cursor:pointer;
     background: linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685));
 }
 .time_select>.end{
-    margin-top:-20px;
+    margin-top:-3px;
 }
