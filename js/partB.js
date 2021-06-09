@@ -7,8 +7,9 @@ fetch(url).then((res)=>res.json()).then((data)=>{
         let locationBar = document.createElement("div");
         locationBar.className = "location_bar";
         mouse(locationBar);
-        locationBar.addEventListener("click",Tw_area);
+        
         locationBar.textContent = locationData[i]["locationName"];
+        locationBar.addEventListener("click",function(){ Tw_area(locationBar.textContent, ""); });
         if(i == 0){
             locationBar.style.borderTopLeftRadius = "2.5em";
         }
@@ -30,18 +31,19 @@ fetch(url).then((res)=>res.json()).then((data)=>{
         let time0 = document.getElementById("time0");
         let time1 = document.getElementById("time1");
         let time2 = document.getElementById("time2");
-        time0.addEventListener("click",Tw_area);
-        time1.addEventListener("click",Tw_area);
-        time2.addEventListener("click",Tw_area);
+        time0.addEventListener("click",function(){ Tw_area("", start0.textContent); });
+        time1.addEventListener("click",function(){ Tw_area("", start1.textContent); });
+        time2.addEventListener("click",function(){ Tw_area("", start2.textContent); });
         mouse(time0);
         mouse(time1);
         mouse(time2);
+        Tw_area(NewArea, "");//顯示預設圖
     };
     console.log(data);
 });
-function Tw_area(){
-    alert("yo");
-};
+// function Tw_area(){
+//     alert("yo");
+// };
 function mouse(p){
     p.addEventListener("mouseover",()=>{
         p.style.background = "darkblue";
