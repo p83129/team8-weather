@@ -43,6 +43,10 @@
     color:white;
     cursor:pointer;
 }
+/*預設為臺北市*/
+.locations>#location5{
+    background: darkblue;
+}
 
 
 .time{

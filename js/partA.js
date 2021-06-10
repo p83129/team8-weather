@@ -19,12 +19,34 @@ function checkTime(i){
   return i;
 }
 var NewArea2 = NewArea;
-function Tw_area(area, time){   
+function Tw_area(area, time){
+  
   //使用者點擊最新的區域名稱
   if(NewArea2 != area && area != ""){
-      NewArea2 = area;
-      // alert(NewArea2)
+    NewArea2 = area;
+    // alert(NewArea2)
+
+    //更新使用者點擊當前景點位置
+    for(let i =0;i<22;i++){
+      if(NewArea2 != document.getElementById("location"+i).innerText){
+        let notcurrentLocation = document.getElementById("location"+i);
+        notcurrentLocation.style.background = "linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685))";
+      }
+    }
   }
+  // 更新使用者點擊時間(為點擊預設為0)
+  for(let i=0;i<3;i++){
+    if(time == document.querySelector(".start"+i)){
+      document.getElementById("time"+i).style.background = "darkblue";
+    }else if(time == ""){
+      document.getElementById("time0").style.background = "darkblue";
+    }
+    if(time != document.querySelector(".start"+i)){
+      document.getElementById("time"+i).style.background = "linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685))";
+    }
+  }
+
+
   //顯示區域圖    
   var TWA = document.getElementById('TWA');
   TWA.setAttribute('src', 'image/' + NewArea2 + '.png');
