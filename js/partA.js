@@ -57,28 +57,52 @@ function Tw_area(area, time){
       max = document.querySelector(".max");
       CI = document.querySelector(".CI");
       PoP = document.querySelector(".PoP");
-      if (locationName == NewArea2 && time == T0 ){ //根據對應的縣市名顯示資料
+
+      if (locationName == NewArea2){ //根據對應的縣市名顯示資料
         wx.textContent = weatherElement[0].time[0].parameter.parameterName;
         wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
         min.textContent = weatherElement[2].time[0].parameter.parameterName + "°c ~";
         max.textContent = weatherElement[4].time[0].parameter.parameterName + "°c ";
         CI.textContent = weatherElement[3].time[0].parameter.parameterName;
         PoP.textContent = weatherElement[1].time[0].parameter.parameterName+ " %";
-      }else if(locationName == NewArea2 && time == T1 ){ //根據對應的縣市名顯示資料
-        wx.textContent = weatherElement[0].time[0].parameter.parameterName;
-        wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
-        min.textContent = weatherElement[2].time[1].parameter.parameterName + "°c ~";
-        max.textContent = weatherElement[4].time[1].parameter.parameterName + "°c ";
-        CI.textContent = weatherElement[3].time[1].parameter.parameterName;
-        PoP.textContent = weatherElement[1].time[1].parameter.parameterName+ " %";
-      }else if (locationName == NewArea2 && time == T2 ){ //根據對應的縣市名顯示資料
-        wx.textContent = weatherElement[0].time[0].parameter.parameterName;
-        wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
-        min.textContent = weatherElement[2].time[2].parameter.parameterName + "°c ~";
-        max.textContent = weatherElement[4].time[2].parameter.parameterName + "°c ";
-        CI.textContent = weatherElement[3].time[2].parameter.parameterName;
-        PoP.textContent = weatherElement[1].time[2].parameter.parameterName+ " %";
+        if(time == T1 ){ //根據對應的縣市名顯示資料
+          wx.textContent = weatherElement[0].time[1].parameter.parameterName;
+          wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
+          min.textContent = weatherElement[2].time[1].parameter.parameterName + "°c ~";
+          max.textContent = weatherElement[4].time[1].parameter.parameterName + "°c ";
+          CI.textContent = weatherElement[3].time[1].parameter.parameterName;
+          PoP.textContent = weatherElement[1].time[1].parameter.parameterName+ " %";
+        }else if (time == T2 ){ //根據對應的縣市名顯示資料
+          wx.textContent = weatherElement[0].time[2].parameter.parameterName;
+          wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
+          min.textContent = weatherElement[2].time[2].parameter.parameterName + "°c ~";
+          max.textContent = weatherElement[4].time[2].parameter.parameterName + "°c ";
+          CI.textContent = weatherElement[3].time[2].parameter.parameterName;
+          PoP.textContent = weatherElement[1].time[2].parameter.parameterName+ " %";
+        }
       }
+      // if (locationName == NewArea2 && time == T0 ){ //根據對應的縣市名顯示資料
+      //   wx.textContent = weatherElement[0].time[0].parameter.parameterName;
+      //   wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
+      //   min.textContent = weatherElement[2].time[0].parameter.parameterName + "°c ~";
+      //   max.textContent = weatherElement[4].time[0].parameter.parameterName + "°c ";
+      //   CI.textContent = weatherElement[3].time[0].parameter.parameterName;
+      //   PoP.textContent = weatherElement[1].time[0].parameter.parameterName+ " %";
+      // }else if(locationName == NewArea2 && time == T1 ){ //根據對應的縣市名顯示資料
+      //   wx.textContent = weatherElement[0].time[1].parameter.parameterName;
+      //   wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
+      //   min.textContent = weatherElement[2].time[1].parameter.parameterName + "°c ~";
+      //   max.textContent = weatherElement[4].time[1].parameter.parameterName + "°c ";
+      //   CI.textContent = weatherElement[3].time[1].parameter.parameterName;
+      //   PoP.textContent = weatherElement[1].time[1].parameter.parameterName+ " %";
+      // }else if (locationName == NewArea2 && time == T2 ){ //根據對應的縣市名顯示資料
+      //   wx.textContent = weatherElement[0].time[2].parameter.parameterName;
+      //   wxIcon.setAttribute("src","image/icon/"+wx.textContent+".png");
+      //   min.textContent = weatherElement[2].time[2].parameter.parameterName + "°c ~";
+      //   max.textContent = weatherElement[4].time[2].parameter.parameterName + "°c ";
+      //   CI.textContent = weatherElement[3].time[2].parameter.parameterName;
+      //   PoP.textContent = weatherElement[1].time[2].parameter.parameterName+ " %";
+      // }
     }
 })
 };
