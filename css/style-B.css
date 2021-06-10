@@ -1,0 +1,82 @@
+.context-B{
+    width: 20%; 
+    margin: 60px 30px 30px 0px;
+	height: 505px; 
+    position: relative; 
+    float: left;
+
+    margin-left: 50px;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 2.5em;
+    text-align: center;
+}
+.location{
+    width:auto;
+    height:49%;
+    border-top-left-radius: 2.5em;
+}
+.location>.locationName{
+    font-size: 30px;
+    font-weight:bold;
+    padding: 5px;
+}
+.location>.locations{
+    width:90%;
+    height:200px;
+    margin: 0 auto;
+    background:linear-gradient(rgb(240, 235, 235),rgb(116, 112, 112));
+    border-top-left-radius: 2.5em;
+    overflow: auto;
+}
+.locations::-webkit-scrollbar {
+    display: none;
+}
+.locations>.location_bar{
+    position: relative;
+    top:2px;
+    width:auto;
+    padding: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685));
+    margin-top: 3px;
+    color:white;
+    cursor:pointer;
+}
+/*預設為臺北市*/
+.locations>#location5{
+    background: darkblue;
+}
+
+
+.time{
+    width:auto;
+    height:235px;
+    margin-top:2%;
+}
+.time>.time_title{
+    font-size: 30px;
+    font-weight:bold;
+    padding: 5px;
+}
+.time>.time_bar{
+    width:90%;
+    height:79%;
+    margin: 0 auto;
+    margin-top: -20px;
+    background:linear-gradient(rgb(240, 235, 235),rgb(116, 112, 112));
+}
+.time_bar>.time_select{
+    position: relative;
+    top:10px;
+    width:auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    color: white;
+    cursor:pointer;
+    background: linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685));
+}
+.time_select>.end{
+    margin-top:-3px;
+}

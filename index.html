@@ -14,40 +14,88 @@
 	<link rel="stylesheet" type="text/css" href="css/style-B.css" />
 	<link rel="stylesheet" type="text/css" href="css/style-C.css" />
 </head>
-<body background="image\body.png"><!-- background="image\body.png" -->
+<body background="image\body.png" onload="startTime()">
 	<div class="title-A">
 		<div class="logo-divA">
 			<img src="image\Logo.png" class="logo-imgA"> 
 		</div>
-		<div style="line-height: 0px; color: #FFFFFF;position: relative;top: 20px;">
+		<div class="weatherA">
 			<h3>氣象觀測站</h3>
 			<p>Meteorological Observatory</p>
+		</div>
+		<div class="timedivA">
+			<div class="timeA">目前時間</div>			
+			<div id="clockA"></div>
 		</div>
 	</div>
 	<div class="marquee-divA">	
 		<div class="bg-grayA"></div>	
-		<font size=4 color="#FFFFFF" style="position: relative; bottom: 25px;"><marquee direction="right" height="25">提醒您防疫期間外出時務必配戴好口罩，氣象觀測站關心您！</marquee></font>
+		<font size=4 color="#FFFFFF" class="fontA">
+			<marquee direction="left" height="25">
+				<img src="image/mark.png" class="mark-imgA"></img> 提醒您防疫期間外出時務必配戴好口罩，氣象觀測站關心您！
+			</marquee>
+		</font>
 	</div>
 	<div class="div-A">
 		<img src="image\body2.png" class="background-imgA">
 		
 		<!-- B部分 -->
-		<div style="border: #FFFFFF; border-style: solid; width: 20%; margin: 60px 30px 30px 0px;
-		height: 500px; position: relative; float: left;"></div>
+		<div class="context-B">
+			<div class="location">
+				<div class="locationName">區域</div>
+				<div class="locations"></div>
+			</div>
+			<div class="time">
+				<div class="time_title">時段</div>
+				<div class="time_bar">
+					<div class="time_select" id="time0">
+						<div class="start0"></div>
+						<div class="end" id="end0"></div>
+					</div>
+					<div class="time_select" id="time1">
+						<div class="start1"></div>
+						<div class="end" id="end1"></div>
+					</div>
+					<div class="time_select" id="time2">
+						<div class="start2"></div>
+						<div class="end" id="end2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- A部分 -->
-		<div class="context-A"></div>
+		<div class="context-A" id="context-A">
+			<div id="TWNameA"></div>
+			<img id="TWA"></img>
+		</div>
 
 		<!-- C部分 -->
-		<div style="border: #FFFFFF; border-style: solid; width: 30%; margin: 60px 0px 30px 30px;
-		height: 500px; position: relative; float: left;"></div>
+		<div class="context-C" id="context-C">
+			<div class="iconContainer">
+				<div class="wx"></div>
+				<img class="wxIcon"></img>
+			</div>
+			<div class="tem">
+				<span class="min"></span>
+				<span class="max"></span>
+			</div>
+			<div class="CI"></div>
+			<div class="PopContainer">
+				<img class="humidity" src="image/icon/humidity.png">
+				<div class="PoP"></div>
+			</div>
+		</div>
 	</div>
 	
 	<script>
 		// 以下是我申請的 KEY 請使用無所謂，你也可以自己去中央氣象局網站申請一個
 		// https://opendata.cwb.gov.tw/index
 		const CWB_API_KEY="CWB-2EF6C203-2256-404D-AD80-5E9DE0982C6A";
+		const NewArea = "臺北市";//先預設查詢地區為臺北市
 	</script>
 	<script src="js/raining.js"></script>
+	<script src="js/partB.js"></script>
+	<script src="js/partA.js"></script>
 </body>
 </html>
