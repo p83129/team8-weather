@@ -37,22 +37,23 @@ fetch(url).then((res)=>res.json()).then((data)=>{
         mouse(time0);
         mouse(time1);
         mouse(time2);
+        //顯示對應欄位
+        let wxIcon = document.querySelector(".wxIcon");
+        let wx = document.querySelector(".wx");
+        let min = document.querySelector(".min");
+        let max = document.querySelector(".max");
+        let CI = document.querySelector(".CI");
+        let PoP = document.querySelector(".PoP");
+        wx.textContent = locationData[5].weatherElement[0].time[0].parameter.parameterName;
+        wxIcon.setAttribute("src","image/icon/"+ wx.textContent+".png");
+        min.textContent = locationData[5].weatherElement[2].time[0].parameter.parameterName + "°c ~";
+        max.textContent = locationData[5].weatherElement[4].time[0].parameter.parameterName + "°c ";
+        CI.textContent = locationData[5].weatherElement[3].time[0].parameter.parameterName;
+        PoP.textContent = locationData[5].weatherElement[1].time[0].parameter.parameterName+ " %";
     };
     Tw_area(NewArea, "");//顯示預設圖
     Tw_area("",time);//時段
-    //顯示對應欄位
-    let wxIcon = document.querySelector(".wxIcon");
-    wxIcon.setAttribute("src","image/icon/"+"sun"+".png");
-    let wx = document.querySelector(".wx");
-    let min = document.querySelector(".min");
-    let max = document.querySelector(".max");
-    let CI = document.querySelector(".CI");
-    let PoP = document.querySelector(".PoP");
-    wx.textContent = locationData[0].weatherElement[0].time[0].parameter.parameterName;
-    min.textContent = locationData[5].weatherElement[2].time[0].parameter.parameterName + "°c ~";
-    max.textContent = locationData[5].weatherElement[4].time[0].parameter.parameterName + "°c ";
-    CI.textContent = locationData[5].weatherElement[3].time[0].parameter.parameterName;
-    PoP.textContent = locationData[5].weatherElement[1].time[0].parameter.parameterName+ " %";
+    
     console.log(data);
 });
 // function Tw_area(){
