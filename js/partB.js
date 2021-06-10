@@ -6,7 +6,8 @@ fetch(url).then((res)=>res.json()).then((data)=>{
         //景點名稱
         let locationBar = document.createElement("div");
         locationBar.className = "location_bar";
-        mouse(locationBar);
+        locationBar.id = "location"+i;
+        locationClick(locationBar);
         
         locationBar.textContent = locationData[i]["locationName"];
         locationBar.addEventListener("click",function(){ Tw_area(locationBar.textContent, ""); });
@@ -34,9 +35,9 @@ fetch(url).then((res)=>res.json()).then((data)=>{
         time0.addEventListener("click",function(){ Tw_area("", start0.textContent); });
         time1.addEventListener("click",function(){ Tw_area("", start1.textContent); });
         time2.addEventListener("click",function(){ Tw_area("", start2.textContent); });
-        mouse(time0);
-        mouse(time1);
-        mouse(time2);
+        locationClick(time0);
+        locationClick(time1);
+        locationClick(time2);
         //顯示對應欄位
         let wxIcon = document.querySelector(".wxIcon");
         let wx = document.querySelector(".wx");
@@ -65,5 +66,10 @@ function mouse(p){
     });
     p.addEventListener("mouseout",()=>{
         p.style.background = "linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685))";
+    });
+}
+function locationClick(p){
+    p.addEventListener("click",()=>{
+        p.style.background = "darkblue";
     });
 }
