@@ -1,7 +1,9 @@
 # team8-weather
 
 郁庭:擔任host的角色，開發標題和區域圖 style-A.css,partA.js,index.html
+
 宗晏:開發目錄和報告 style-B.css, partA.js,partB.js,index.html
+
 育玲:開發氣象資訊和報告 style-C.css, partA.js,partB.js,index.html
 
 
