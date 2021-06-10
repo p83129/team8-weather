@@ -57,17 +57,6 @@ fetch(url).then((res)=>res.json()).then((data)=>{
     
     console.log(data);
 });
-// function Tw_area(){
-//     alert("yo");
-// };
-function mouse(p){
-    p.addEventListener("mouseover",()=>{
-        p.style.background = "darkblue";
-    });
-    p.addEventListener("mouseout",()=>{
-        p.style.background = "linear-gradient(rgb(46, 141, 133),rgba(37, 43, 117, 0.685))";
-    });
-}
 function locationClick(p){
     p.addEventListener("click",()=>{
         p.style.background = "darkblue";
